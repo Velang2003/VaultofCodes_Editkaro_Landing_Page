@@ -1,0 +1,211 @@
+body{
+    align-items: center;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+}
+
+main{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+menu{
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: white;
+    margin-top: -10px;
+    /* border: 1px solid black; */
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 5px;
+    z-index: 1;
+}
+
+.nav-bar{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    z-index: 0;
+}
+
+#about, #skills-interest, #projects, #contact{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* About Section */
+.about-section, .project-section{
+    width: 60%;
+}
+
+.about-section a, #projects a{
+    margin: 40px 20px ;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: invert;
+    border: 1px solid black;
+    top: 1.5rem;
+    left: -1.4rem;
+    position: relative;
+    height: 90vh;
+}
+
+.about-section a:hover{
+    background-color: black;
+    color: white;
+}
+
+/* Skill & Interest section */
+
+#skills-interest{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+}
+
+.skills, .interest{
+    width: 40%;
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px;
+    margin: 2%;
+}
+
+#skills-interest li{
+    list-style-type: disc;
+    padding: 10px;
+}
+
+.project-section{
+   
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px;
+}
+.project-section a{
+    background-color: black;
+    color: white;
+    margin: 20px;
+}
+
+.project-section a:hover{
+    background-color: white;
+    color: black;
+    border-radius: 1px solid;
+}
+
+.project-section:nth-child(even){
+    margin-left: 20rem;
+}
+
+#contact div, #contact div h4{
+    display: inline;
+    margin:20px 10px 50px;
+}
+
+#contact section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+}
+
+
+/* ✅ For tablets & small laptops */
+@media screen and (max-width: 768px) {
+    main {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    menu {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .nav-bar {
+        width: 90%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+    }
+
+    #about, #skills-interest, #projects, #contact {
+        width: 95%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .about-section, .project-section {
+        width: 90%;
+        margin-top: 50px;
+    }
+
+    #skills-interest {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .skills, .interest {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .project-section:nth-child(even) {
+        margin-left: 0; /* Remove zig-zag offset */
+    }
+
+    #contact section {
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: medium;
+    }
+}
+
+/* ✅ For small mobile screens */
+@media screen and (max-width: 480px) {
+    menu {
+        border-radius: 0;
+        box-shadow: none;
+        position: relative;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .about-section a, #projects a {
+        width: 100%;
+        margin: 20px 0;
+        left: 0;
+    }
+
+    .skills, .interest {
+        width: 100%;
+        padding: 5%;
+    }
+}
